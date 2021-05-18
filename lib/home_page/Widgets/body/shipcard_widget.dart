@@ -5,7 +5,7 @@ import 'package:wings_project/core/app_images.dart';
 import 'package:wings_project/core/app_styles.dart';
 import 'package:wings_project/core/app_text_styles.dart';
 import 'package:wings_project/core/app_widgets/app_dropshadow.dart';
-import 'package:wings_project/core/app_widgets/app_infinitylistview.dart';
+import 'package:wings_project/core/app_widgets/app_InfinitySingleChildScrollView.dart';
 
 class ShipCard extends StatefulWidget {
   
@@ -117,7 +117,7 @@ class ShipNameAndSize extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            InfinitySingleChildListView(text: name),
+            InfinitySingleChildScrollView(text: name, style: AppTextStyles.shipCardName),
             Text(size, style: AppTextStyles.shipCardSize,),
           ],
         ),

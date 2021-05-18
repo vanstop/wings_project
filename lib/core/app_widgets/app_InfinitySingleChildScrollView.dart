@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
-import '../app_text_styles.dart';
 
-class InfinitySingleChildListView extends StatefulWidget {
+class InfinitySingleChildScrollView extends StatefulWidget {
   final String text;
+  final TextStyle style;
 
-  const InfinitySingleChildListView({Key key, this.text}) : super(key: key);
+  const InfinitySingleChildScrollView({Key key, this.text, this.style}) : super(key: key);
 
   @override
-  _InfinitySingleChildListViewState createState() => _InfinitySingleChildListViewState(text);
+  _InfinitySingleChildScrollViewState createState() => _InfinitySingleChildScrollViewState(text, style);
 }
 
-class _InfinitySingleChildListViewState extends State<InfinitySingleChildListView> {
+class _InfinitySingleChildScrollViewState extends State<InfinitySingleChildScrollView> {
 
   ScrollController _scrollController = new ScrollController();
   final String text;
+  final TextStyle style;
 
-  _InfinitySingleChildListViewState(this.text);
+  _InfinitySingleChildScrollViewState(this.text, this.style);
 
   @override
   void initState(){
@@ -63,7 +64,7 @@ class _InfinitySingleChildListViewState extends State<InfinitySingleChildListVie
       controller: _scrollController,
       physics: BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
-      child: Text(text, style: AppTextStyles.shipCardName)
+      child: Text(text, style: style)
     );
   }
 }
