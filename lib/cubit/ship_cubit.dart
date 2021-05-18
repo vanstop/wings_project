@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:wings_project/api/Ship.dart';
+import 'package:wings_project/src/models/ship_model.dart';
 import 'package:wings_project/api/ShipAPIReader.dart';
 
 part 'ship_state.dart';

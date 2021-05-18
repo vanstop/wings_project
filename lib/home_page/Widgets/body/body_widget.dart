@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wings_project/api/Ship.dart';
+import 'package:wings_project/src/models/ship_model.dart';
 import 'package:wings_project/cubit/ship_cubit.dart';
 import 'listview_widget.dart';
 

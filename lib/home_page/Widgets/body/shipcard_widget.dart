@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:wings_project/api/Ship.dart';
+import 'package:wings_project/src/models/ship_model.dart';
 import 'package:wings_project/core/app_images.dart';
 import 'package:wings_project/core/app_styles.dart';
 import 'package:wings_project/core/app_text_styles.dart';

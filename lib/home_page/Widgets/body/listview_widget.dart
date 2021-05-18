@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wings_project/api/Ship.dart';
+import 'package:wings_project/src/models/ship_model.dart';
 import 'package:wings_project/core/app_colors.dart';
 import 'package:wings_project/core/app_text_styles.dart';
 import 'package:wings_project/home_page/Widgets/body/shipcard_widget.dart';

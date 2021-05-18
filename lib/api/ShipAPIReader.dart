@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:wings_project/api/Ship.dart';
+import 'package:wings_project/src/models/ship_model.dart';
 
 import 'XWingDataManifest.dart';
 
