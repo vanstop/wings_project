@@ -4,13 +4,13 @@ class XWingDataManifest {
   List<String> factions;
   List<String> stats;
   List<String> actions;
-  List<Pilots> pilots;
+  List<Pilot> pilots;
   List<String> upgrades;
   String conditions;
   List<String> quickBuilds;
 
-  XWingDataManifest(
-      {this.version,
+  XWingDataManifest({
+      this.version,
       this.damagedecks,
       this.factions,
       this.stats,
@@ -27,9 +27,9 @@ class XWingDataManifest {
     stats = json['stats'].cast<String>();
     actions = json['actions'].cast<String>();
     if (json['pilots'] != null) {
-      pilots = new List<Pilots>();
+      pilots = [];
       json['pilots'].forEach((v) {
-        pilots.add(new Pilots.fromJson(v));
+        pilots.add(new Pilot.fromJson(v));
       });
     }
     upgrades = json['upgrades'].cast<String>();
@@ -54,13 +54,13 @@ class XWingDataManifest {
   }
 }
 
-class Pilots {
+class Pilot {
   String faction;
   List<String> ships;
 
-  Pilots({this.faction, this.ships});
+  Pilot({this.faction, this.ships});
 
-  Pilots.fromJson(Map<String, dynamic> json) {
+  Pilot.fromJson(Map<String, dynamic> json) {
     faction = json['faction'];
     ships = json['ships'].cast<String>();
   }

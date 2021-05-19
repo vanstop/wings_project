@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tuple/tuple.dart';
 import 'package:wings_project/src/models/ship_model.dart';
 import 'package:wings_project/cubit/ship_cubit.dart';
 import 'listview_widget.dart';
@@ -21,15 +22,15 @@ class WingsBody extends StatelessWidget {
       builder: (context, state){
         if(state is ShipInitial)
         {
-          List<String> shipsNames = 
+          List<Tuple2<String, String>> shipTuples = 
           [
-            "quadrijet-transfer-spacetug",
-            "t-65-x-wing",
-            "tie-ln-fighter",
-            "fang-fighter",
-            "a-sf-01-b-wing",
+            Tuple2("scumandvillainy", "quadrijet-transfer-spacetug"),
+            Tuple2("rebelalliance", "t-65-x-wing"),
+            Tuple2("galacticempire", "tie-ln-fighter"),
+            Tuple2("scumandvillainy", "fang-fighter"),
+            Tuple2("rebelalliance", "a-sf-01-b-wing"),
           ];
-          updateData(context, shipsNames);
+          updateData(context, shipTuples);
           return buildInitial();
         }
         if(state is ShipLoading)
@@ -68,12 +69,13 @@ Widget buildLoaded(List<Ship> shipList){
     children: [
       WingsListView("Minhas Naves", shipList),
       WingsListView("Meus Esquadrões", shipList),
+      WingsListView("Minhas Navinhas", shipList),
     ],
   );
 }
 
-void updateData(BuildContext context, List<String> shipsNames){
+void updateData(BuildContext context, List<Tuple2<String, String>> shipTuples){
   final shipCubit = context.read<ShipCubit>();
-  shipCubit.fetchShipList(shipsNames);
+  shipCubit.fetchShipList(shipTuples);
 }
 

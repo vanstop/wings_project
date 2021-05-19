@@ -14,10 +14,9 @@ dependencies:
     
   bloc: ^6.0.1
   flutter_bloc: ^6.0.1
-  http: ^0.13.2
-
 
   cupertino_icons: ^1.0.2
+  tuple: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -31,15 +30,15 @@ flutter:
   assets:
     - assets/images/logos/
     - assets/images/ships/
-    - assets/xwing-data2/data/
-    - assets/xwing-data2/data/pilots/first-order/
-    - assets/xwing-data2/data/pilots/galactic-empire/
-    - assets/xwing-data2/data/pilots/galactic-republic/
-    - assets/xwing-data2/data/pilots/rebel-alliance/
-    - assets/xwing-data2/data/pilots/resistance/
-    - assets/xwing-data2/data/pilots/scum-and-villainy/
-    - assets/xwing-data2/data/pilots/separatist-alliance/
-
+    - xwing-data2/data/
+    - xwing-data2/data/pilots/first-order/
+    - xwing-data2/data/pilots/galactic-empire/
+    - xwing-data2/data/pilots/galactic-republic/
+    - xwing-data2/data/pilots/rebel-alliance/
+    - xwing-data2/data/pilots/resistance/
+    - xwing-data2/data/pilots/scum-and-villainy/
+    - xwing-data2/data/pilots/separatist-alliance/
+    
   fonts:
     - family: Coolveltica
       fonts:
